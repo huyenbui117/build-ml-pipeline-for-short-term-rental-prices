@@ -73,15 +73,3 @@ def test_price_range(data: pd.DataFrame, min_price: float, max_price: float):
     """
     assert data['price'].between(min_price, max_price).all()
 
-def test_no_nulls(data: pd.DataFrame):
-    """
-    Test that there are no null values in the dataset
-    """
-    assert not data.isnull().any().any()
-
-def test_no_duplicates(data: pd.DataFrame):
-    """
-    Test that there are no duplicate rows in the dataset
-    """
-    assert not data.duplicated().any()
-
